@@ -1,0 +1,25 @@
+#go to development folder
+#dev ethz 
+#cd ~/Development/dspace-ethz
+dev() { cd $HOME/Development/dspace-$@/ ;}
+
+#remove spring folder
+#spring ethz 
+#rm -R ~/Development/dspace-ethz/config/spring
+spring() { rm -R $HOME/Development/dspace-$@/config/spring ;}
+
+#run dspace script
+#dspace ethz oai import -c
+#~/Development/dspace-ethz/bin/dspace oai import -c
+dspace() { $HOME/Development/dspace-"$1"/bin/dspace "${@:2}";}
+
+#run dspace script with class
+#dspace ethz com.atmire.scripts.TestScript
+#~/Development/dspace-ethz/bin/dspace dsrun com.atmire.scripts.TestScript
+dsrun() { $HOME/Development/dspace-"$1"/bin/dspace dsrun "${@:2}";}
+
+#run index script for discovery
+#dindex ethz -f
+#~/Development/dspace-ethz/bin/dspace index-discovery -f
+dindex() { $HOME/Development/dspace-"$1"/bin/dspace index-discovery "${@:2}";}
+
