@@ -14,7 +14,7 @@ spring() { rm -R $HOME/Development/dspace-$@/config/spring ;}
 dspace() { $HOME/Development/dspace-"$1"/bin/dspace "${@:2}";}
 
 #run dspace script with class
-#dspace ethz com.atmire.scripts.TestScript
+#dsrun ethz com.atmire.scripts.TestScript
 #~/Development/dspace-ethz/bin/dspace dsrun com.atmire.scripts.TestScript
 dsrun() { $HOME/Development/dspace-"$1"/bin/dspace dsrun "${@:2}";}
 
