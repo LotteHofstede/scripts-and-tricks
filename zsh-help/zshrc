@@ -23,3 +23,6 @@ dsrun() { $HOME/Development/dspace-"$1"/bin/dspace dsrun "${@:2}";}
 #~/Development/dspace-ethz/bin/dspace index-discovery -f
 dindex() { $HOME/Development/dspace-"$1"/bin/dspace index-discovery "${@:2}";}
 
+#Open log
+dslog() { open -a /Applications/Utilities/Console.app $HOME/Development/dspace-"$@"/log/dspace.log.$(date +%Y-%m-%d) }
+
